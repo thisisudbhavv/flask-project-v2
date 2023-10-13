@@ -30,6 +30,18 @@
         max-width: 720px;
         margin: 0 auto 0 auto;
       }
+      .button {
+        display: inline-block;
+        padding: 10px 20px; 
+        background-color: #007bff; 
+        color: #fff; 
+        border: none;
+        border-radius: 5px; 
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px; 
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -39,9 +51,13 @@
       <h2>About Jovian</h2>
       <p class="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <h2>Open Positions</h2>
-      <p class="bodytext">TODO - Show openings</p>
+      <div>
+        {% for job in jobs %}
+          {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
       <div style="text-align:center">
-        <button>Contact Us</button>
+        <button class='button'>Contact Us</button>
         <p>Copyright 2023, Jovian</p>
       </div>
     </div>
