@@ -9,6 +9,7 @@
       cursor: pointer;
       transition: background-color 0.3s;
       border-radius: 10px;
+      text-decoration: none;
     }
 
     .apply-button:hover {
@@ -27,7 +28,7 @@
       {% endif %}
     </div>
     <div style="flex: 0;">
-      <button type="button" class="apply-button">Apply</button>
+      <a href="mailto:hello@jovian.ai?subject=Application for {{job['title']}}" type="button" class="apply-button">Apply</a>
     </div>
   </div>
 </body>
