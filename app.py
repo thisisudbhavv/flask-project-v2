@@ -22,6 +22,10 @@ def show_job(id):
     return "Job not found", 404
   return render_template('jobpage.html', job=job)
 
+@app.route('/api/job/<id>')
+def show_jobs(id):
+  job = load_job(id)
+  return jsonify(job)
 
 @app.route('/job/<id>/apply', methods=['post'])
 def apply_job(id):
