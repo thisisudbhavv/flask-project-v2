@@ -1,35 +1,78 @@
-<h4>Application Form</h4>
-<form action="/job/{{job['id']}}/apply" method="post">
-  <div class="mb-2">
-    <label>Full Name</label><br>
-    <input type="text" name="name" placeholder="Name" required>
-  </div>
+<head>
+  <style>
+    body {
+      margin: 0;
+    }
 
-  <div class="mb-2">
-    <label>Email</label><br>
-    <input type="email" name="email" placeholder="your@email.com" required>
-  </div>
+    form {
+      max-width: 400px;
+      text-align: left;
+    }
 
-  <div class="mb-2">
-    <label>LinkedIn URL</label><br>
-    <input type="url" name="linkedIn" placeholder="linkedin.com/yourID" >
-  </div>
+    label {
+      margin-bottom: 5px;
+    }
 
-  <div class="mb-2">
-    <label>Education</label><br>
-    <textarea name="education"></textarea>
-  </div>
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
 
-  <div class="mb-2">
-    <label>Work Experience</label><br>
-    <textarea name="workExperience"></textarea>
-  </div>
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-  <div class="mb-2">
-    <label>Resume URL</label><br>
-    <input type="url" name="resume">
-  </div>
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+      transition: 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <h4 class="mb-3">Application Form</h4>
+  <form action="/job/{{job['id']}}/apply" method="post">
+    <div class="mb-2">
+      <label>Full Name</label><br>
+      <input type="text" name="name" placeholder="Name" required>
+    </div>
   
-
-  <input type="submit">
-</form>
+    <div class="mb-2">
+      <label>Email</label><br>
+      <input type="email" name="email" placeholder="your@email.com" required>
+    </div>
+  
+    <div class="mb-2">
+      <label>LinkedIn URL</label><br>
+      <input type="url" name="linkedIn" placeholder="linkedin.com/yourID" >
+    </div>
+  
+    <div class="mb-2">
+      <label>Education</label><br>
+      <textarea name="education"></textarea>
+    </div>
+  
+    <div class="mb-2">
+      <label>Work Experience</label><br>
+      <textarea name="workExperience"></textarea>
+    </div>
+  
+    <div class="mb-2">
+      <label>Resume URL</label><br>
+      <input type="url" name="resume">
+    </div>
+    
+    <input type="submit">
+  </form>
+</body>
